@@ -1,0 +1,366 @@
+* { box-sizing: border-box;}
+body {
+    margin: 0;
+    font-family: arial;
+    color: white;
+    background-color: beige;
+}
+/* Téléphone */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background-color: #10233f;
+}
+.logo { color: #f2a33a; font-size: 1.25rem; font-weight: bold; }
+nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 16px; }
+nav a { color: white; text-decoration: none;border-bottom: 2px solid transparent; transition: color 0.3s, border-color 0.3s;}
+nav a:hover { color: #3a2025; border-color: #c07a8d;}
+
+/* Tablette et plus */
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px 32px;
+  }
+  .logo { font-size: 1.5rem; }
+}
+
+
+
+
+.entet {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background-color: #420111;
+}
+.logo {
+    color: #B78793;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.navv { display: flex; gap: 24px;}
+.navv a {
+    color: #B78793;
+    text-decoration: none;
+}
+.bannier {position: relative;}
+.bannier img { 
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+
+}
+.bannier-text {
+    position: absolute;
+    top: 0;
+    width: 60%;
+    height: 110%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.bannier-text h1 {
+    font-size: 48px ;
+    color: #631629;
+    margin-top: 16px;
+}
+.bannier-text p { color:black;}
+.bnt {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 12px 25px;
+    background-color: #B78793;
+    color: black;
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: bold;
+}
+.bnt:hover { background-color: #420111;}
+
+@keyframes apparition {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.1); }
+}
+
+/* 2. L'appliquer */
+
+
+
+.bnt {
+  display: inline-block;
+  background-color: #7a3f56; color: black;
+  padding: 12px 18px; border-radius: 999px;
+  animation: pulse 1.5s infinite;
+}
+
+
+.conteneur {
+    max-width: 1199px;
+    margin: 0 auto;
+    padding: 10px 10px;
+}
+h2 { text-align: center; font-size: 3rem;color: black; }
+.categorie {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center;
+    gap: 20px;
+    
+    
+}
+.categorie-ar {
+    position: relative;
+    flex: 1 1 280px;
+    background-color: #e8c9d0;
+    border-radius: 220px 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px black;
+    max-width: 350px;
+  
+}
+.categorie-ar:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rebeccapurple;
+}
+.categorie img { 
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    
+}
+
+
+
+.categorie-text { padding: 16px; color: #7a3f56;}
+.categorie-text h3 { margin: 0 0 5px; color: #4B0F1F;}
+.prix { color: #420111;}
+.bntc {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 12px 25px;
+    background-color: #B78793;
+    color: black;
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: bold;
+}
+@keyframes apparition {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.1); }
+}
+
+/* 2. L'appliquer */
+.bntc {
+  display: inline-block;
+  background-color: #7a3f56;
+ color: white;
+  padding: 12px 18px; border-radius: 999px;
+  animation: pulse 1.5s infinite;
+}
+
+
+.footer {
+    background-color: #420111;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    margin-top: 50px;
+}
+.footer-conte {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: auto;
+    gap: 100px;
+}
+.footer-f { flex: 1; min-height: 0px;}
+.footer-f h3 { color: #da8ea1; margin-bottom: 20px;}
+.footer-f a { color: white; text-decoration:none ;}
+.footer-f a:hover { color: #631629;}
+.footer-bas {
+    text-align: center;
+    border-top: 1px solid #444;
+    margin-top: 0px;
+    padding-top: 0px;
+    font-size: 14px;
+    color: #B78793;
+}
+/* categorie page */
+.text {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #7a3f56;
+}
+.commander {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    background-color: #222;
+    color: white;
+    padding: 12px 18px ;
+    border-radius: 999px;
+    text-decoration: none;
+    z-index: 10;
+}
+@keyframes apparition {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.1); }
+}
+
+/* 2. L'appliquer */
+.commander {
+  display: inline-block;
+  background-color: #cf7e97; color: white;
+  padding: 12px 18px; border-radius: 999px;
+  animation: pulse 1.5s infinite;
+}
+
+
+  /* ============================================
+       1. L2ALWAN DYAL SITE
+       Bddl hna w ytbddl kolchi f page
+       ============================================ */
+    :root {
+      --couleur-header: #4a2c32;   /* prune fonce */
+      --couleur-carte: #dccbcd;    /* rose clair */
+      --couleur-fond: #f4eeee;     /* fond dyal page */
+      --couleur-texte: #3a2025;    /* lon dyal l ktaba */
+    }
+
+    /* ============================================
+       2. STYLE 3am (kolchi)
+       ============================================ */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--couleur-fond);
+      color: var(--couleur-texte);
+      margin: 0;               /* kanms7o l fragh dyal navigateur */
+    }
+
+    /* ============================================
+       3. HEADER (l barre lfo9aniya)
+       ============================================ */
+    header {
+      background-color: var(--couleur-header);
+      padding: 20px;
+    }
+    header h2 {
+      color: #e8b9c0;          /* rose dyal logo */
+      margin: 0;
+    }
+
+    /* ============================================
+       4. FORMULAIRE (la carte fiha kolchi)
+       ============================================ */
+    form {
+      background-color: var(--couleur-carte);
+      max-width: 450px;        /* lkbar lmaximum */
+      margin: 30px auto;       /* auto = f wst d page */
+      padding: 25px;
+      border-radius: 20px;     /* zwaya mdawra */
+    }
+
+    form h1 {
+      text-align: center;
+    }
+
+    /* Kol titre dyal khana (Nom, Adresse...) */
+    label {
+      display: block;          /* kaykon f ster wa7do */
+      margin-top: 15px;
+      margin-bottom: 5px;
+   }
+
+    /* Les khanat li kaktb fihom */
+    input[type="text"],
+    input[type="tel"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #bbb;
+      border-radius: 8px;
+      font-size: 16px;
+      box-sizing: border-box;  /* bach ma ytjawzch l'largeur */
+    }
+
+    /* L labels dyal les choix (Crêpe, Tabaqiy, Lycra) */
+    label.choix {
+      display: inline;         /* dd m3a radio f nafs ster */
+    }
+
+    /* ============================================
+       5. L2ALWAN: kolchi mkhbbi f lbdya
+       ============================================ */
+    .couleurs {
+      display: none;
+    }
+
+    /* Ila l client khtar Crêpe ==> bayen l2alwan dyal Crêpe */
+    #crepe:checked ~ .couleurs-crepe {
+      display: block;
+    }
+
+    /* Ila khtar Tabaqiy ==> bayen l2alwan dyal Tabaqiy */
+    #tabaqiy:checked ~ .couleurs-tabaqiy {
+      display: block;
+    }
+
+    /* Ila khtar Lycra ==> bayen l2alwan dyal Lycra */
+    #lycra:checked ~ .couleurs-lycra {
+      display: block;
+    }
+
+    /* ============================================
+       6. BOUTON
+       ============================================ */
+    button {
+      width: 100%;
+      margin-top: 25px;
+      padding: 14px;
+      background-color: var(--couleur-header);
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: black;   /* ملي دز l souris */
+    }
+    button:active { transform: scale(0,5);}
+
+
+
